@@ -36,7 +36,7 @@ namespace ControlSystem
         {
             try
             {
-                string query = @"SELECT id, position From general WHERE position='Admi' OR position='Security'";
+                string query = @"SELECT id, position From general WHERE position='Admin' OR position='Security'";
 
                 //create MySqlReader and MySqlCommand obj, execute query 
                 MySqlCommand command = new MySqlCommand(query, Program.connection);
@@ -134,6 +134,13 @@ namespace ControlSystem
                     SecurityPanel panel = new SecurityPanel();
                     panel.Show();
                 }
+                else//admin panel
+                {
+               
+                    AdminPanel panel1 = new AdminPanel();
+                    panel1.Show();
+                }
+              
                 this.Hide();
             });
             //open form from current thread(serial port listener thread)
