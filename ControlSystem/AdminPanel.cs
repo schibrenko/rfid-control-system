@@ -22,12 +22,12 @@ namespace ControlSystem
         {
             InitializeComponent();
 
-            //Hide tab cintrol and his tabs
+            //Hide tab control and his tabs
             tabControl1.TabPages.Remove(add_tab);
             tabControl1.TabPages.Remove(edit_tab);
             tabControl1.Visible = false;
         }
-        //on close form back to loginandclose ports in current form
+        //on close form back to login and close ports in current form
         private void AdminPanel_FormClosed(object sender, FormClosedEventArgs e)
         {
             /*back to main form*/
@@ -36,7 +36,7 @@ namespace ControlSystem
             system.Show();
         }
         /*check every tick . All rows are fill or not
-        *if all show add button and give a user aportunities to add new profile
+        *if all - show "add" button and give a user aportunities to add new profile
         */
         private void timer1_Tick(object sender, EventArgs e)
         {
